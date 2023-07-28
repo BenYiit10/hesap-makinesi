@@ -1,0 +1,36 @@
+
+.calc-main {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows:auto auto;
+  gap: 2rem;
+} 
+
+.calc-main-container {
+  color: #f8f8f8;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:#313131 ;
+      width: 92px;
+      height: 92px;
+      border-radius: 9999px;
+      &:last-child {
+        background-color: #f69a06;
+      }
+
+      span {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform:translate(-50%,-50%) ;
+      }
+
+    }
+  }
+}
