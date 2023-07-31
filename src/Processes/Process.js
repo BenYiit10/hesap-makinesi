@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { symbol, plus} from "../Redux/Reducer"
+import { symbol} from "../Redux/Reducer"
 
 
 export  default function Process({children,...props}) {
