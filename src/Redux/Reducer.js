@@ -8,9 +8,11 @@ export const processes = createSlice({
         prevNum:0,
         presentNum:0,
         symbol:"",
-        total:0,
         resultAppreance:[],
-        clickable:true
+        clickable:true,
+
+        chainingEqual:[],
+        total:0,
     },
     reducers:{
         setNumber:(state,action) => {
@@ -21,17 +23,18 @@ export const processes = createSlice({
             state.presentNum=parseFloat(state.num)
             
             state.resultAppreance=[...state.resultAppreance,action.payload]
-            console.log(state.resultAppreance)
-
+            
+            
             state.clickable=true;
         },
         symbol:(state,action) => {
             if(state.clickable==true) {
-                state.prevNum=state.num
+                state.prevNum=parseInt(state.num)
                 state.symbol=action.payload
                 state.resultAppreance=[...state.resultAppreance,state.symbol]
                 
-                console.log(state.resultAppreance)
+                state.chainingEqual=[...state.chainingEqual,state.presentNum,state?.symbol]
+                console.log(state.chainingEqual/* .reduce(function (param) {  }) */)
                 
                 state.num="0"
                 state.clickable=false
@@ -39,9 +42,20 @@ export const processes = createSlice({
         },
         equal:(state) => {
             try {
-                state.num= eval(parseFloat(state.prevNum)+state.symbol+parseFloat(state.presentNum))
+                state.num= eval(state.prevNum+state.symbol+parseFloat(state.presentNum))
                 state.total = parseFloat(state.num)
                 state.resultAppreance=[state.num]
+
+                state.chainingEqual=[...state.chainingEqual,state.presentNum]
+                console.log(state.chainingEqual/* .reduce(function (param) {  }) */)
+                
+                console.log(state.chainingEqual.pop())
+                if(state.chainingEqual.pop()== "+"||"-"||"/"||"*") {
+                    console.log("bu iş yürümze")
+                }
+                else {
+                    console.log("ya allah")
+                }
             }
             catch (error) {
                 console.log(error)

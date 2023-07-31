@@ -6,7 +6,7 @@ export  default function Equal({children}) {
     const dispatch = useDispatch()
 
     return (
-        <div onClick={() => dispatch(equal())} className='!bg-[#f69a06] text-[38px] cursor-pointer'>
+        <div onClick={() => dispatch(equal())} className='equal !bg-[#f69a06] !text-[38px]  cursor-pointer'>
             {children}
         </div>    
     )

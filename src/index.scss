@@ -72,3 +72,9 @@
     user-select: none;
   }
 }
+
+.equal {
+  @media (max-width:768px) {
+    font-size: 32px !important;
+  }
+}

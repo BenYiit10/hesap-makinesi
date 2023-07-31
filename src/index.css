@@ -74,4 +74,10 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+@media (max-width: 768px) {
+  .equal {
+    font-size: 32px !important;
+  }
 }/*# sourceMappingURL=index.css.map */
