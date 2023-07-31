@@ -30,4 +30,9 @@
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+}
+.calc-main-container div {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=index.css.map */
