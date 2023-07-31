@@ -17,7 +17,7 @@ const Calculater =() => {
     return (
         <>
             <div className='inset-0 h-screen bg-[#313131] flex justify-center items-center text-white'>
-                <div className='calc-main w-[480px] bg-black rounded-[50px] p-8 border border-white'>
+                <div className='calc-main w-[480px] bg-black rounded-[50px] p-8 border border-solid border-white'>
                     <div className='result w-full h-[320px] overflow-hidden justify-self-end flex flex-col justify-end text-8xl font-thin text-end'>
                         <div>{num}</div>
                         <span className='result-appreance h-5 text-base text-neutral-400 font-normal'>
@@ -37,7 +37,7 @@ const Calculater =() => {
                             <Clicked>7</Clicked>
                             <Clicked>8</Clicked>
                             <Clicked>9</Clicked>
-                            <Process process={"/"}><BsSlash/></Process>
+                            <Process process="/"><BsSlash/></Process>
                         </div>
                         <div>
                             <Clicked>4</Clicked>
@@ -49,13 +49,13 @@ const Calculater =() => {
                             <Clicked>1</Clicked>
                             <Clicked>2</Clicked>
                             <Clicked>3</Clicked>
-                            <Process process={"-"}><BsDash/></Process>
+                            <Process process="-"><BsDash/></Process>
                         </div>
-                        <div className='gap-4'>
+                        <div className=''>
                             <Clicked>0</Clicked>
                             <Restart>C</Restart>
                             <Equal><FaEquals/></Equal>
-                            <Process process={"*"}><BsX/></Process>
+                            <Process process="*"><BsX/></Process>
                         </div>
                     </div>
                 </div>
