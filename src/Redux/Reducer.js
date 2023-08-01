@@ -28,7 +28,7 @@ export const processes = createSlice({
             state.clickable=true;
         },
         symbol:(state,action) => {
-            if(state.clickable==true) {
+            if(state.clickable===true) {
                 state.prevNum=parseInt(state.num)
                 state.symbol=action.payload
                 state.resultAppreance=[...state.resultAppreance,state.symbol]
@@ -50,7 +50,7 @@ export const processes = createSlice({
                 console.log(state.chainingEqual/* .reduce(function (param) {  }) */)
                 
                 console.log(state.chainingEqual.pop())
-                if(state.chainingEqual.pop()== "+"||"-"||"/"||"*") {
+                if(state.chainingEqual.pop()=== "+"||"-"||"/"||"*") {
                     console.log("bu iş yürümze")
                 }
                 else {
